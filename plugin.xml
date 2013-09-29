@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.polyvi.xface.extension.xmlhttprequest"
+    rersion="1.0.0">
+    <name>XMLHttpRequest</name>
+    <author>PolyVi Inc.</author>
+    <description>xFace XMLHttpRequest Extension</description>
+    <license>GPLv3</license>
+    <keywords>cordova, xface, xmlhttprequest</keywords>
+
+    <js-module name="XMLHttpRequest" src="www/XMLHttpRequest.js">
+        <clobbers target="window.xFace.XMLHttpRequest" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="XMLHttpRequest">
+                <param name="ios-package" value="XXMLHttpRequestExt" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/XMutableURLRequest.h" />
+        <source-file src="src/ios/XMutableURLRequest.m" />
+        <header-file src="src/ios/XXMLHttpRequestExt.h" />
+        <source-file src="src/ios/XXMLHttpRequestExt.m" />
+    </platform>
+</plugin>
