@@ -13,6 +13,29 @@
         <clobbers target="window.xFace.XMLHttpRequest" />
     </js-module>
 
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="XMLHttpRequest">
+                <param name="android-package" value="com.polyvi.xface.extension.xmlhttprequest.XXMLHttpRequestExt"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+        <source-file src="src/android/XAjaxException.java" target-dir="src/com/polyvi/xface/extension/xmlhttprequest" />
+        <source-file src="src/android/XAjaxRequestListener.java" target-dir="src/com/polyvi/xface/extension/xmlhttprequest" />
+        <source-file src="src/android/XIAjaxDataInterface.java" target-dir="src/com/polyvi/xface/extension/xmlhttprequest" />
+        <source-file src="src/android/XXMLHttpRequest.java" target-dir="src/com/polyvi/xface/extension/xmlhttprequest" />
+        <source-file src="src/android/XXMLHttpRequestContainer.java" target-dir="src/com/polyvi/xface/extension/xmlhttprequest" />
+        <source-file src="src/android/XXMLHttpRequestExt.java" target-dir="src/com/polyvi/xface/extension/xmlhttprequest" />
+     </platform>
+
     <!-- ios -->
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
