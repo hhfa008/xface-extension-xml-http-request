@@ -89,12 +89,17 @@ static NSArray* errorMsg;
 - (void)sendData:(id)data
 {
     checkState(OPENED)
-    NSData* rawData = nil;
-    if ([data isKindOfClass:[NSString class]]) {
-        rawData = [data dataUsingEncoding:NSUTF8StringEncoding];
-        //TODO:支持其他类型的数据
+
+    if(![[self HTTPMethod] isEqualToString: @"GET"] && ![[self HTTPMethod] isEqualToString: @"HEAD"])
+    {
+        NSData* rawData = nil;
+        if ([data isKindOfClass:[NSString class]]) {
+            rawData = [data dataUsingEncoding:NSUTF8StringEncoding];
+            //TODO:支持其他类型的数据
+        }
+        [self setHTTPBody:rawData];
     }
-   [self setHTTPBody:rawData];
+
     _theConnection = [[NSURLConnection alloc] initWithRequest:self delegate:self];
 
     if (_theConnection) {
