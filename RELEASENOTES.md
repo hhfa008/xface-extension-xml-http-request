@@ -21,3 +21,6 @@
 -->
 
 # Release Notes
+### 1.0.0 Tue Jan 07 2014 16:08:34 GMT+0800 (CST)
+ *  fixed typo for version string
+ *  同步p4 18147到3.2 解决BUG #5701::中联商圈：ios：登录注册报：通信失败，错误码：303
