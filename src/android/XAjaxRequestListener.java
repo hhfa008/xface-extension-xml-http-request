@@ -55,7 +55,6 @@ public class XAjaxRequestListener {
 
     /**
      * ajax状态改变 调用该回调函数
-     *
      */
     public void onReadyStateChanged() {
         sendSuccessJSMessage();
@@ -63,7 +62,6 @@ public class XAjaxRequestListener {
 
     /**
      * ajax abort调用该回调函数
-     *
      */
     public void onAbort() {
         sendErrorJSMessage(ON_ABORT);
@@ -90,7 +88,6 @@ public class XAjaxRequestListener {
 
     /**
      * 发送成功消息给js 成功回调对应js onreadystatechange事件
-     *
      */
     private void sendSuccessJSMessage() {
         try {
@@ -108,7 +105,6 @@ public class XAjaxRequestListener {
 
     /**
      * 错误回调对应ajax进度事件类型 目前仅仅支持onerror onabort
-     *
      */
     private void sendErrorJSMessage(int eventType) {
         try {

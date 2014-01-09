@@ -23,7 +23,6 @@ package com.polyvi.xface.extension.xmlhttprequest;
 
 /**
  * 描述ajax请求异常信息
- *
  */
 public class XAjaxException extends Exception {
 
@@ -33,7 +32,6 @@ public class XAjaxException extends Exception {
 
     /**
      * ajax执行对应的错误码
-     *
      */
     public enum ErrorCode {
         INVALID_STATE_ERR, INVALID_HEADER_VALUE, METHOD_NOT_SUPPORT, HTTP_REQUEST_ERROR
@@ -41,7 +39,6 @@ public class XAjaxException extends Exception {
 
     /**
      * ajax执行对应的错误信息
-     *
      */
     public static String[] ErrorMessages = new String[] { "Invalid Status",
             "Invalid header value", "Not Spport Method", "Network ERROR" };

@@ -30,12 +30,10 @@ import android.content.Context;
 
 /**
  * ajax容器 维护所有的ajax对象
- *
  */
 public class XXMLHttpRequestContainer {
     /**
      * ajax 管理map
-     *
      */
     private ConcurrentHashMap<String, XXMLHttpRequest> mAjaxMap = new ConcurrentHashMap<String, XXMLHttpRequest>();
     private Context mContext;
@@ -46,7 +44,6 @@ public class XXMLHttpRequestContainer {
 
     /**
      * 删除所有的请求对象
-     *
      */
     public void removeAllRequestObj() {
         // 断开监听

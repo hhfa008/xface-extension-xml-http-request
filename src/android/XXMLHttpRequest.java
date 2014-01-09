@@ -40,7 +40,6 @@ import com.polyvi.xface.http.XHttpWorker;
 
 /**
  * 参照W3C规范 实现的ajax请求对象
- *
  */
 public class XXMLHttpRequest extends XAsyncHttpResponseHandler implements
         XIAjaxDataInterface {
@@ -140,7 +139,6 @@ public class XXMLHttpRequest extends XAsyncHttpResponseHandler implements
 
     /**
      * 中断请求
-     *
      */
     public void abort() {
         internalAbort();
@@ -196,7 +194,6 @@ public class XXMLHttpRequest extends XAsyncHttpResponseHandler implements
 
     /**
      * 发生网络错误
-     *
      */
     private void networkError() {
         clearRequest();
@@ -270,7 +267,6 @@ public class XXMLHttpRequest extends XAsyncHttpResponseHandler implements
 
     /**
      * 清空对象状态
-     *
      */
     private void internalAbort() {
         // 取消请求
@@ -280,7 +276,6 @@ public class XXMLHttpRequest extends XAsyncHttpResponseHandler implements
 
     /**
      * 清空请求头部
-     *
      */
     private void clearRequest() {
         mRequestHeaders.clear();
@@ -292,7 +287,6 @@ public class XXMLHttpRequest extends XAsyncHttpResponseHandler implements
 
     /**
      * 清空响应
-     *
      */
     private void clearResponse() {
         mResponseHeaders = null;
